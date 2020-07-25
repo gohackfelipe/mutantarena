@@ -1,0 +1,44 @@
+<app-loading *ngIf="loading"></app-loading>
+<app-modal></app-modal>
+<div class="container">
+  <div class="left-bg-red">
+    <img src="./assets/imgs/logo_dark.svg" class="mutant" alt="Mutant Arena">
+    <div class="left-infos">
+      <h2>OLÁ, HUMANO!<br>SABE O QUE É UM TESTE DE MUTAÇÃO?</h2>
+      <h4>Quanto mais mutações uma suíte de testes “mata”, maiores são as chances de que o código produzido tenha sido
+        bem escrito e totalmente coberto por testes sólidos.
+      </h4>
+      <button>CONTE-ME MAIS</button>
+    </div>
+  </div>
+  <div class="form-box">
+    <section>
+      <!-- <app-toaster></app-toaster> -->
+      <span>CADASTRO</span>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <main>
+        <div class="row">
+          <label>NOME DE USUÁRIO</label>
+          <input class="input-default" formControlName="username" type="text" placeholder="digite seu nome..." autofocus>
+        </div>
+        <!--<div class="row">
+          <label>SOBRENOME</label>
+          <input class="input-default warn" formControlName="middleName" type="text" placeholder="digite seu sobrenome...">
+        </div> -->
+        <div class="row">
+          <label>EMAIL</label>
+          <input class="input-default" type="email" formControlName="email" placeholder="digite um email válido...">
+        </div>
+        <div class="row">
+          <label>SENHA</label>
+          <input class="input-default" formControlName="password" type="password" placeholder="digite sua senha...">
+        </div>
+      </main>
+      <div class="bottom-btn">
+        <button [routerLink]="['/login']" type="button">CANCELAR</button>
+        <button [disabled]="loading" type="submit">CADASTRAR</button>
+      </div>
+      </form>
+    </section>
+  </div>
+</div>

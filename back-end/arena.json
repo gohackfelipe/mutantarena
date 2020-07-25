@@ -1,0 +1,17 @@
+{
+    "success": {
+        "code": 200,
+        "data": [
+            {
+                "_id": "5d33c433ef7dc5187e550b63",
+                "name": "Arena da Calculadora",
+                "description": "fazendo uma soma legal",
+                "sourceToMutate": "class Calculator {\n  constructor(x, y) {\n    this.total = 0;\n    this.x = x;\n    this.y = y;\n  }\n\n  sum() {\n    return this.x + this.y;\n  }\n}\n\nmodule.exports = Calculator;",
+                "__v": 0,
+                "dateCreated": "2019-07-21T01:47:31.617Z"
+            }
+        ],
+        "time": 1563956555,
+        "total": 1
+    }
+}

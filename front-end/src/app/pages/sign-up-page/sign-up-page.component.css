@@ -1,0 +1,171 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-infos {
+  padding: 0 30px 0 30px;
+  margin-top: 30px;
+}
+
+.left-infos h2 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: var(--c-dark-violet);
+  margin-bottom: 5px;
+}
+
+.left-infos h4 {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--c-dark-violet);
+  line-height: 29px;
+}
+
+.left-infos button {
+  border: 2px solid;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 20px;
+  width: 225px;
+  height: 76px;
+  border-color: var(--c-dark-violet);
+  font-size: 20px;
+}
+
+.form-box {
+  position: relative;
+  margin-top: 150px;
+  width: 917px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 3px;
+  background: #211f2c;
+  padding-bottom: 90px;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-box section span {
+  position: absolute;
+  left: -22px;
+  top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--c-red);
+  width: 276px;
+  height: 85px;
+  border-radius: 3px;
+  background: var(--c-dark-violet);
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-box section .bottom-btn {
+  position: absolute;
+  bottom: -28px;
+  left: 105px;
+}
+
+.form-box section .bottom-btn button {
+  margin-right: 25px;
+}
+
+.form-box section .bottom-btn button:first-of-type {
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  width: 170.94px;
+  height: 85px;
+  border: 0;
+  color: var(--c-violet);
+  background: var(--c-dark-violet);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form-box section .bottom-btn button:nth-of-type(2) {
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 0 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 312px;
+  height: 85px;
+  border: 0;
+  color: var(--c-white);
+  text-align: left;
+  background: var(--c-red);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form-box section .bottom-btn button:nth-of-type(2):after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-image: url("../../../assets/imgs/mutant1.svg");
+  width: 26px;
+  height: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-box section main {
+  padding: 142px 105px 0 105px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-box section main .row {
+  margin: 18px 0;
+}
+
+.form-box section main .input-default {
+  font-weight: 300;
+  font-size: 20px;
+  width: 430px;
+  border: 0;
+  height: 72px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #171520;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--c-white);
+}
+
+.form-box section main label {
+  display: block;
+  font-size: 20px;
+  color: var(--c-red);
+  margin-bottom: 8px;
+}
+/*# sourceMappingURL=sign-up-page.component.css.map */

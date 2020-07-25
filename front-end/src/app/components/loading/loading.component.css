@@ -1,0 +1,176 @@
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading > div {
+  position: relative;
+  -webkit-animation: fly-body 1.5s infinite linear;
+          animation: fly-body 1.5s infinite linear;
+}
+
+.loading > div .fly-mutant {
+  width: 37px;
+  height: 34px;
+}
+
+.loading > div:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 15px;
+  top: 0px;
+  right: -20px;
+  background-image: url("../../../assets/imgs/right-wing.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-animation: right-wing 0.5s infinite;
+          animation: right-wing 0.5s infinite;
+}
+
+.loading > div:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 15px;
+  top: 0px;
+  left: -20px;
+  background-image: url("../../../assets/imgs/left-wing.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation: left-wing 0.5s infinite;
+          animation: left-wing 0.5s infinite;
+}
+
+@-webkit-keyframes fly-body {
+  0% {
+    -webkit-transform: translateY(-2px) rotate(-5deg);
+            transform: translateY(-2px) rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: translate(0px) rotate(0deg);
+            transform: translate(0px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translateY(2px) rotate(5deg);
+            transform: translateY(2px) rotate(5deg);
+  }
+  80% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-2px) rotate(-5deg);
+            transform: translateY(-2px) rotate(-5deg);
+  }
+}
+
+@keyframes fly-body {
+  0% {
+    -webkit-transform: translateY(-2px) rotate(-5deg);
+            transform: translateY(-2px) rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: translate(0px) rotate(0deg);
+            transform: translate(0px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translateY(2px) rotate(5deg);
+            transform: translateY(2px) rotate(5deg);
+  }
+  80% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-2px) rotate(-5deg);
+            transform: translateY(-2px) rotate(-5deg);
+  }
+}
+
+@-webkit-keyframes right-wing {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes right-wing {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@-webkit-keyframes left-wing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes left-wing {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+.none {
+  display: none;
+}
+/*# sourceMappingURL=loading.component.css.map */

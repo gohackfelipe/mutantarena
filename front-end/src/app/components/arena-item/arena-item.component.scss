@@ -1,0 +1,35 @@
+.arena-item {
+  min-width: 216px;
+  max-width: 250px;
+  height: 136px;
+  border-radius: 3px;
+  background: #1c1a27;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  padding: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff5956;
+  }
+
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    margin: 5px 0;
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    color: #848294;
+  }
+}

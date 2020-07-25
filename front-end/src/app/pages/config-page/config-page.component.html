@@ -1,0 +1,61 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="wrapper-main">
+  <div class="mutant-container">
+    <div class="arena-configs">
+      <span>CONFIGURAÇÕES DE ARENAS</span>
+      <div class="top-configs">
+        <h2>ARENAS CADASTRADAS</h2>
+        <button class="btn-nova-arena" (click)="activeNewArenaBox()">NOVA ARENA</button>
+      </div>
+      <app-no-items-found *ngIf="arenaTotal === 0" :title="Nenhuma arena cadastrada até o momento." :message="Você pode criar quantas arenas desejar."></app-no-items-found>
+      <!-- COMPONENTE DE NOT FOUND -->
+      <div class="arena-configs-list">
+        <app-arena-config-item *ngFor="let arena of arenas" [arena]="arena" (deleteEvent)="delete($event)"
+          (editEvent)="edit($event)">
+        </app-arena-config-item>
+      </div>
+    </div>
+    <div class="new-arena fade" *ngIf="boxArena">
+      <form [formGroup]="arenaForm">
+        <div class="left-new-arena">
+          <h3>CADASTRAR NOVA ARENA</h3>
+          <label>NOME DA ARENA</label>
+          <input type="text" placeholder="Digite o nome da arena..." formControlName="nameArena">
+          <label>DESCRIÇÃO</label>
+          <textarea placeholder="Descreva a arena..." name="" id="" cols="30" rows="5"
+            formControlName="descriptionArena"></textarea>
+          <div class="action-btns">
+            <button class="cancel" (click)="resetFormAndBox()">cancelar</button>
+            <button class="save-arena" (click)="save()">SALVAR</button>
+          </div>
+        </div>
+        <!-- <div class="right-new-arena">
+        <label>MUTANTES NA ARENA</label>
+        <app-no-items-found></app-no-items-found>
+        <div class="mutant-config-list">
+          <app-mutant-config-item></app-mutant-config-item>
+        </div>
+      </div> -->
+      </form>
+    </div>
+
+  </div>
+  <div class="right-container" *ngIf="boxArena">
+     <!-- <div class="top-right"> -->
+      <!-- <button class="code {{ tabs[0].active && 'active' }}" (click)="changeTab(0)">CÓDIGO</button> -->
+      <!-- <button class="history {{ tabs[1].active && 'active' }}" (click)="changeTab(1)">CONFIGURAÇÕES</button> -->
+    <!-- </div> -->
+    <div class="code-box {{ !tabs[0].active && 'none' }}">
+      <h3>COLE O CÓDIGO QUE SERÁ MUTACIONADO ABAIXO:</h3>
+      <div class="my-code">
+        <angular-monaco-editor class="customMonacoEditor" [options]="{}" [(ngModel)]="code"></angular-monaco-editor>
+        <!-- <button class="send-code" (click)="sendCode()">ENVIAR</button> -->
+      </div>
+    </div>
+    <!-- <div class="history-box {{ !tabs[1].active && 'none' }}"> -->
+      <!-- <h3>CONFIGURAÇÕES</h3> -->
+      <!-- <div class="history-list"> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+    "test": {
+        "status": "queue",
+        "user": "felipe.santos@uniriotec.br",
+        "dateCreated": "2019-07-20T18:34:29.672Z",
+        "testCaseCode": "var assert = require('assert');\nvar expect = require('chai').expect;\nvar Calc = require('./app');\n\n\ndescribe('Calculator', function() {\n  describe('sum', function() {\n    it('should return 2', function() {\n      expect((new Calc(1,1)).sum()).equal(2);\n    });\n  });\n});",
+        "_id": "5d33c4d4296c7718dc83c5ad",
+        "first": false,
+        "arena": {
+            "_id": "5d33c433ef7dc5187e550b63",
+            "sourceToMutate": "class Calculator {\n    constructor(x, y) {\n        this.total = 0;\n        this.x = x;\n        this.y = y;\n    }\n\n    sum() {\n        return this.x + this.y;\n    }\n\n    teste() {\n        return this.x * this.y;\n    }\n}\n\nmodule.exports = Calculator;"
+        }
+    }
+}

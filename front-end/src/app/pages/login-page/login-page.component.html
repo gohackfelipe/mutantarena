@@ -1,0 +1,47 @@
+<app-loading *ngIf="loading"></app-loading>
+<app-modal></app-modal>
+<div class="container">
+  <div class="left-bg-red">
+    <img src="./assets/imgs/logo_dark.svg" class="mutant" alt="Mutant Arena">
+    <div class="left-infos">
+      <h2>OLÁ, HUMANO!<br>SABE O QUE É UM TESTE DE MUTAÇÃO?</h2>
+      <h4>Quanto mais mutações uma suíte de testes “mata”, maiores são as chances de que o código produzido tenha sido
+        bem escrito e totalmente coberto por testes sólidos.
+      </h4>
+      <button>CONTE-ME MAIS</button>
+    </div>
+  </div>
+  <div class="form-box">
+    <section>
+      <div *ngIf="messageErrorLogin" class="invalid-feedback">
+        <app-toaster :message="{{ messageErrorLogin }}"></app-toaster>
+      </div>
+
+      <div *ngIf="submitted && (f.password.errors || f.username.errors)" class="invalid-feedback">
+        <!-- <div *ngIf="f.password.errors.required || f.username.errors.required"> -->
+          <app-toaster :message="Digite um e-mail e senha válida"></app-toaster>
+        <!-- </div> -->
+      </div>
+
+      <span>MUTE-SE</span>
+      <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()"  autocomplete="off">
+        <main>
+          <div class="row">
+            <label>USUÁRIO</label>
+            <input class="input-default" formControlName="username" type="text" placeholder="digite seu usuário..."
+              autofocus>
+          </div>
+          <div class="row">
+            <label>SENHA</label>
+            <input class="input-default" formControlName="password" type="password" placeholder="digite sua senha...">
+          </div>
+          <!-- <a href="login">esqueci minha senha</a> -->
+        </main>
+        <div class="bottom-btn">
+          <button [routerLink]="['/signup']" type="button">CADASTRAR</button>
+          <button [disabled]="loading" type="submit">ENTRAR</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

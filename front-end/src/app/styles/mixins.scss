@@ -1,0 +1,64 @@
+@mixin btn-ghost {
+  border: 2px solid;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+@mixin btn-default {
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+@mixin input-default {
+  font-weight: 300;
+  font-size: 20px;
+  width: 430px;
+  border: 0;
+  height: 72px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #171520;
+  box-sizing: border-box;
+  color: var(--c-white);
+}
+
+@mixin make-scrollbar() {
+  $scrollbar-border-radius: 4px;
+
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: $scrollbar-border-radius;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $scrollbar-border-radius;
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scrollbar-border-radius;
+    background-color: rgba(0, 0, 0, .2);
+
+    &:hover {
+      background: rgba(0, 0, 0, .4);
+    }
+  }
+}

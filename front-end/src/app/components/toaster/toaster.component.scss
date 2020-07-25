@@ -1,0 +1,47 @@
+.toaster {
+  position: absolute;
+  right: 30px;
+  top: 45px;
+  width: max-content;
+  max-width: 480px;
+  padding: 0 35px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  color: var(--c-white);
+
+  p {
+    padding: 1px 0 0 15px;
+  }
+
+  &.error {
+    background: var(--c-ured);
+  }
+
+  &.warn {
+    background: var(--c-orange);
+  }
+
+  &.ok {
+    background: var(--c-green)
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .toaster {
+    right: 20px;
+    top: 20px;
+    padding: 0 25px;
+    height: 35px;
+    font-size: 14px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="mutation-test-elements.js"></script>
+    <script>
+        var search = new URLSearchParams(window.location.search);
+        if (search.has("round")) {
+            var __idRound = search.get('round');
+            var _url = 'https://api.mutantarena.feliperibeiro.dev/round/' + __idRound;
+            $.ajax({
+                url: _url
+            }).done((result) => {
+                const report = result.success.data.report;
+                eval(report);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <img src="mutant.svg" alt="" style="margin: 10px 0 10px 15px; width: 200px; height: 38px;" />
+    <mutation-test-report-app titlePostfix="Stryker">
+        Your browser doesn't support <a href="https://caniuse.com/#search=custom%20elements">custom elements</a>.
+        Please use a latest version of an evergreen browser (Firefox, Chrome, Safari, Opera, etc).
+    </mutation-test-report-app>
+    <script src="bind-mutation-test-report.js"></script>
+</body>
+
+</html>

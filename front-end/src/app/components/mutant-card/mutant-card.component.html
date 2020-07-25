@@ -1,0 +1,6 @@
+<div class="mutant-card">
+  <span></span>
+  <h2>{{ name }}</h2>
+  <img class="img-mutant" src="./assets/imgs/mutant3.svg" alt="">
+  <div [ngClass]="(mutant.status !== 1)?'mutant-status alive':'mutant-status ext'"></div>
+</div>

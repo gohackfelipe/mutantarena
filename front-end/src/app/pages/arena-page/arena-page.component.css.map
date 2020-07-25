@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,MAAM,EAAE,IAAI;CACb;;AAED,AACE,aADW,CACX,gBAAgB,CAAC;EACf,SAAS,EAAE,KAAK;CACjB",
+    "sources": [
+        "arena-page.component.scss"
+    ],
+    "names": [],
+    "file": "arena-page.component.css"
+}

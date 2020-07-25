@@ -1,0 +1,245 @@
+@import '../../styles/mixins.scss';
+
+.container {
+  display: flex;
+}
+
+.left-infos {
+  padding: 0 30px 0 30px;
+  margin-top: 30px;
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: var(--c-dark-violet);
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--c-dark-violet);
+    line-height: 29px;
+  }
+
+  button {
+    font-family: 'Montserrat', sans-serif;
+
+    @include btn-ghost;
+    margin-top: 20px;
+    width: 225px;
+    height: 76px;
+    border-color: var(--c-dark-violet);
+    font-size: 20px;
+  }
+}
+
+.form-box {
+  position: relative;
+  margin-top: 150px;
+  width: 917px;
+  height: max-content;
+  border-radius: 3px;
+  background: #211f2c;
+  padding-bottom: 90px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+  section {
+    span {
+      position: absolute;
+      left: -22px;
+      top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 30px;
+      color: var(--c-red);
+      width: 276px;
+      height: 85px;
+      border-radius: 3px;
+      background: var(--c-dark-violet);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .bottom-btn {
+      position: absolute;
+      bottom: -28px;
+      left: 105px;
+
+      button {
+        margin-right: 25px;
+
+        &:first-of-type {
+          @include btn-default;
+          width: 170.94px;
+          height: 85px;
+          border: 0;
+          color: var(--c-violet);
+          background: var(--c-dark-violet);
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        &:nth-of-type(2) {
+          @include btn-default;
+          position: relative;
+          padding: 0 32px;
+          box-sizing: border-box;
+          width: 312px;
+          height: 85px;
+          border: 0;
+          color: var(--c-white);
+          text-align: left;
+          background: var(--c-red);
+          font-size: 20px;
+          font-weight: 600;
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 32px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background-image: url('../../../assets/imgs/right-arrow.svg');
+            width: 26px;
+            height: 26px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+    }
+
+    main {
+      padding: 142px 105px 0 105px;
+      box-sizing: border-box;
+
+      .row {
+        margin: 18px 0;
+      }
+
+      .input-default {
+        @include input-default;
+      }
+
+      label {
+        display: block;
+        font-size: 20px;
+        color: var(--c-red);
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .left-bg-red {
+    min-width: 180px;
+    width: 30%;
+    padding: 35px 0 0 30px;
+  }
+
+  .mutant {
+    width: 150px;
+  }
+
+  .left-infos {
+    padding: 0 30px 0 20px;
+    margin-right: 20px;
+
+    h2 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    h4 {
+      font-size: 17px;
+      line-height: 18px;
+    }
+
+    button {
+      width: auto;
+      padding: 0 10px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+
+  .form-box {
+    margin-top: 120px;
+    width: 600px;
+    padding-bottom: 60px;
+
+    section {
+      span {
+        position: absolute;
+        left: -15px;
+        top: 24px;
+        font-size: 16px;
+        width: 170px;
+        height: 60px;
+      }
+
+      .bottom-btn {
+        position: absolute;
+        bottom: -20px;
+        left: 40px;
+
+        button {
+          margin-right: 18px;
+
+          &:first-of-type {
+            width: auto;
+            padding: 0 12px;
+            height: 60px;
+            font-size: 15px;
+          }
+
+          &:nth-of-type(2) {
+            padding: 0 18px;
+            width: 190px;
+            height: 60px;
+            font-size: 15px;
+
+            &:after {
+              content: '';
+              right: 18px;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+
+      main {
+        padding: 100px 40px 0 40px;
+        box-sizing: border-box;
+
+        .row {
+          margin: 14px 0;
+        }
+
+        .input-default {
+          font-size: 16px;
+          width: 300px;
+          height: 50px;
+        }
+
+        label {
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

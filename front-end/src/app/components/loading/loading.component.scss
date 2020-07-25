@@ -1,0 +1,108 @@
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >div {
+    position: relative;
+    animation: fly-body 1.5s infinite linear;
+
+    .fly-mutant {
+      width: 37px;
+      height: 34px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 15px;
+      top: 0px;
+      right: -20px;
+      background-image: url('../../../assets/imgs/right-wing.svg');
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform-origin: bottom left;
+      animation: right-wing 0.5s infinite;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 15px;
+      top: 0px;
+      left: -20px;
+      background-image: url('../../../assets/imgs/left-wing.svg');
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform-origin: bottom right;
+      animation: left-wing 0.5s infinite;
+    }
+  }
+}
+
+@keyframes fly-body {
+  0% {
+    transform: translateY(-2px) rotate(-5deg)
+  }
+
+  20% {
+    transform: translate(0px) rotate(0deg)
+  }
+
+  40% {
+    transform: translateY(2px) rotate(5deg)
+  }
+
+  80% {
+    transform: translateY(0px) rotate(0deg)
+  }
+
+  100% {
+    transform: translateY(-2px) rotate(-5deg)
+  }
+}
+
+@keyframes right-wing {
+  0% {
+    transform: rotate(10deg)
+  }
+
+  50% {
+    transform: rotate(-10deg)
+  }
+
+  100% {
+    transform: rotate(10deg)
+  }
+}
+
+@keyframes left-wing {
+  0% {
+    transform: rotate(-10deg)
+  }
+
+  50% {
+    transform: rotate(10deg)
+  }
+
+  100% {
+    transform: rotate(-10deg)
+  }
+}
+
+.none {
+  display: none;
+}

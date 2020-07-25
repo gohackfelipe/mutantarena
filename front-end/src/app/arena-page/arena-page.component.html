@@ -1,0 +1,77 @@
+<app-loading *ngIf="loading"></app-loading>
+<app-modal></app-modal>
+<div class="container">
+  <div class="wrapper-left">
+    <div class="left-bg-red">
+      <img src="./assets/imgs/logo_dark.svg" class="mutant" alt="Mutant Arena">
+    </div>
+  </div>
+  <nav class="top-menu">
+    <a href="/arena">ARENA</a>
+    <a href="/arena">PERFIL</a>
+    <a href="/arena">RANKING</a>
+    <a href="/arena">CONFIGS</a>
+    <div>
+      <span class="profile-name">Olá, {{ getUserName() }}</span>
+      <button (click)="logout()">Sair</button>
+    </div>
+  </nav>
+  <div class="wrapper-main">
+    <div class="mutant-container">
+      <span>MUTE-SE</span>
+      <div class="top-mutant">
+        <div>
+          <div class="life">
+            <div class="ext-info">
+              <img src="../../assets/imgs/ext.svg" alt="Exterminados">
+              <span class="pt-ext">4</span>
+            </div>
+            <div class="liv-info">
+              <span class="pt-ext">6</span>
+              <img src="../../assets/imgs/liv.svg" alt="Vivos">
+            </div>
+            <div class="ext"></div>
+            <div class="liv"></div>
+          </div>
+          <p>40% exterminados</p>
+        </div>
+      </div>
+      <div class="mutant-card-list">
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+        <app-mutant-card></app-mutant-card>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="top-right">
+        <button class="code">CÓDIGO</button>
+        <button class="history active">MEUS TESTES</button>
+      </div>
+      <div class="code-box none">
+        <h3>COLE SEU CÓDIGO ABAIXO</h3>
+        <div class="my-code">
+          <!-- COMPONENTE DE CÓDIGO AQUI -->
+          <button class="send-code">ENVIAR</button>
+        </div>
+      </div>
+      <div class="history-box">
+        <h3>HISTÓRICO DE TESTES</h3>
+        <div class="history-list">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

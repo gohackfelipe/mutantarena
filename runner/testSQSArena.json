@@ -1,0 +1,10 @@
+{
+    "test": {
+        "arena": {
+            "_id": "5d33c433ef7dc5187e550b63",
+            "sourceToMutate": "class Calculator {\n    constructor(x, y) {\n        this.total = 0;\n        this.x = x;\n        this.y = y;\n    }\n\n    sum() {\n        return this.x + this.y;\n    }\n\n    teste() {\n        return this.x * this.y;\n    }\n}\n\nmodule.exports = Calculator;"
+        },
+        "testCaseCode": "// \n\nmodule.exports={}\n\n",
+        "first": true
+    }
+}

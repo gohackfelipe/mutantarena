@@ -1,0 +1,21 @@
+<!-- <app-loading *ngIf="loading"></app-loading> -->
+<!-- <app-modal></app-modal> -->
+<!-- <app-modal-arena></app-modal-arena> -->
+<div class="container">
+  <div class="wrapper-left">
+    <div class="left-bg-red">
+      <img src="./assets/imgs/logo_dark.svg" class="mutant" alt="Mutant Arena">
+    </div>
+  </div>
+  <nav class="top-menu">
+    <a *ngIf="!isUserAdmin" [routerLink]="'/arena'">ARENA</a>
+    <!-- <a [routerLink]="'/perfil'">PERFIL</a> -->
+    <!-- <a [routerLink]="'/ranking'">RANKING</a> -->
+    <a *ngIf="isUserAdmin" [routerLink]="'/configs'">CONFIGS</a>
+    <div>
+      <span class="profile-name">Olá, {{ userName }}</span>
+      <button (click)="logout()">Sair</button>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

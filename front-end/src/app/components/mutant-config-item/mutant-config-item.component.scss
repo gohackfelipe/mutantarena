@@ -1,0 +1,48 @@
+@import '../../styles/mixins.scss';
+
+.mutant-config-item {
+  transition: background-color 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  max-width: 600px;
+  border-bottom: 1px solid #292638;
+
+  &:hover {
+    transition: background-color 0.15s ease;
+    background-color: #1C1A27;
+  }
+
+  .mutant-infos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #848294;
+    margin-left: 10px;
+  }
+
+  button {
+    font-family: 'Montserrat', sans-serif;
+    @include btn-ghost;
+    color: #848294;
+    border-color: #848294;
+    width: auto;
+    padding: 0 10px;
+    height: 24px;
+    margin-left: 15px;
+  }
+}

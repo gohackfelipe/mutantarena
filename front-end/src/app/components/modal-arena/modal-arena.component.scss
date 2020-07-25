@@ -1,0 +1,176 @@
+@import '../../styles/mixins.scss';
+
+.wrap-modal {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+}
+
+.none {
+  display: none;
+}
+
+.modal-arena {
+  min-width: 430px;
+  padding: 50px 50px 50px 50px;
+  position: relative;
+  width: max-content;
+  max-width: 960px;
+  width: 80vw;
+  max-height: 80vh;
+  border-radius: 3px;
+  background: var(--c-mid-violet);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  height: max-content;
+  padding-bottom: 90px;
+
+  .arena-list {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    grid-column-gap: 18px;
+    @include make-scrollbar();
+    grid-row-gap: 1px;
+    overflow: auto;
+    height: calc(80vh - 80px);
+  }
+
+  span {
+    position: absolute;
+    left: -22px;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--c-red);
+    width: 450px;
+    height: 85px;
+    border-radius: 3px;
+    background: var(--c-dark-violet);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  p {
+    font-size: 22px;
+    color: var(--c-violet);
+    line-height: 28px;
+  }
+
+  .bottom-btn {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: max-content;
+    right: 0;
+    margin: 0 auto;
+
+    button {
+      margin-right: 25px;
+
+      &:first-of-type {
+        @include btn-default;
+        width: 170.94px;
+        height: 85px;
+        border: 0;
+        color: var(--c-violet);
+        background: var(--c-dark-violet);
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &:nth-of-type(2) {
+        @include btn-default;
+        position: relative;
+        padding: 0 32px;
+        box-sizing: border-box;
+        width: 312px;
+        height: 85px;
+        border: 0;
+        color: var(--c-white);
+        text-align: center;
+        background: var(--c-red);
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .modal-arena {
+    position: relative;
+    padding: 30px;
+    width: 70vw;
+    max-height: 70vh;
+    height: max-content;
+
+    .arena-list {
+      margin-top: 65px;
+      overflow: auto;
+      height: calc(70vh - 65px);
+    }
+
+    span {
+      position: absolute;
+      left: -15px;
+      top: 25px;
+      font-size: 16px;
+      width: 320px;
+      height: 60px;
+    }
+
+    p {
+      font-size: 22px;
+      color: var(--c-violet);
+      line-height: 28px;
+    }
+
+    .bottom-btn {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      width: max-content;
+      right: 0;
+      margin: 0 auto;
+
+      button {
+        margin-right: 25px;
+
+        &:first-of-type {
+          @include btn-default;
+          width: 170.94px;
+          height: 85px;
+          border: 0;
+          color: var(--c-violet);
+          background: var(--c-dark-violet);
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        &:nth-of-type(2) {
+          @include btn-default;
+          position: relative;
+          padding: 0 32px;
+          box-sizing: border-box;
+          width: 312px;
+          height: 85px;
+          border: 0;
+          color: var(--c-white);
+          text-align: center;
+          background: var(--c-red);
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

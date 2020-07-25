@@ -1,0 +1,13 @@
+node_modules/
+.nyc_output
+.sass-cache
+.stryker-tmp/
+logs/
+docker/
+
+#temp files
+app.js
+test.js
+reports/
+
+mutants/

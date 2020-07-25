@@ -1,0 +1,13 @@
+.customMonacoEditor {
+  height: 100%;
+}
+
+.wrapper-main .right-container {
+  margin: 100px 0 0 50px;
+  height: calc(70% + 80px);
+}
+
+.wrapper-main .right-container .code-box .my-code {
+  width: 100%;
+}
+/*# sourceMappingURL=config-page.component.css.map */

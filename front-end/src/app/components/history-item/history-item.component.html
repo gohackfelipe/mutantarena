@@ -1,0 +1,8 @@
+<div class="history-item">
+  <span>{{dateCreated}}<br>{{timeCreated}}</span>
+  <span *ngIf="round.mutants?.length > 0 && round.status !== 'ERR'"> {{ score }}</span>
+  <span *ngIf="round.status === 'ERR'">Erro no códig@</span>
+  <span *ngIf="round.status === 'QUEUE'">Processando</span>
+  <!-- <button [disabled]="round.status === 'ERR'" [routerLink]="['/report',round._id]">Ver</button> -->
+  <button [disabled]="round.status === 'ERR'" (click)="visualizeReportDetail()">Ver</button>
+</div>

@@ -1,0 +1,71 @@
+@import '../../styles/mixins.scss';
+
+.arena-config-item {
+  transition: background-color 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  max-width: 600px;
+
+  &:hover {
+    transition: background-color 0.15s ease;
+    background-color: #1C1A27;
+  }
+
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #848294;
+    line-height: 18px;
+  }
+
+  button {
+    @include btn-ghost;
+    font-family: 'Montserrat', sans-serif;
+    color: #848294;
+    border-color: #848294;
+    width: auto;
+    padding: 0 12px;
+    height: 34px;
+    margin-left: 15px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .arena-config-item {
+    padding: 8px;
+    margin-top: 5px;
+    max-width: 450px;
+
+    &:hover {
+      transition: background-color 0.15s ease;
+      background-color: #1C1A27;
+    }
+
+    span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    button {
+      font-family: 'Montserrat', sans-serif;
+      padding: 0 7px;
+      height: 28px;
+      font-weight: 600;
+      font-size: 13px;
+      margin-left: 9px;
+    }
+  }
+}

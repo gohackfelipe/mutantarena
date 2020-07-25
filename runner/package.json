@@ -1,0 +1,31 @@
+{
+  "name": "mutation-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stryker-mutator/core": "^2.0.2",
+    "@stryker-mutator/html-reporter": "^2.0.2",
+    "@stryker-mutator/javascript-mutator": "^2.0.2",
+    "@stryker-mutator/mocha-framework": "^2.0.2",
+    "@stryker-mutator/mocha-runner": "^2.0.2",
+    "app-root-path": "^2.2.1",
+    "aws-sdk": "^2.496.0",
+    "chai": "^4.2.0",
+    "commander": "^2.20.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.0",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.3",
+    "stryker-mocha-framework": "^0.15.1",
+    "uuidv1": "^1.6.14",
+    "winston": "^3.2.1"
+  }
+}

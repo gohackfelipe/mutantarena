@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,MAAM,EAAE,IAAI;CACb;;AAED,AACE,aADW,CACX,gBAAgB,CAAC;EAEf,MAAM,EAAE,cAAc;EACtB,MAAM,EAAE,gBAAgB;CAOzB;;AAXH,AAOM,aAPO,CACX,gBAAgB,CAKd,SAAS,CACP,QAAQ,CAAC;EACP,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "config-page.component.scss"
+    ],
+    "names": [],
+    "file": "config-page.component.css"
+}

@@ -1,0 +1,49 @@
+{
+  "message": {
+    "success": {
+      "code": 200,
+      "data": {
+        "idToken": {
+          "jwtToken": "eyJraWQiOiJVcDF5Rms1NDlIXC9CVFowOVdKUXRXWWE2cGlVM25WaDVkNFQ3OUpZV092bz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI0ZGQxODE3NC0yODg1LTQ1ODItYmM4Mi02YWE0NWZjOWExMzMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRGxTa29kSHQ0IiwiY29nbml0bzp1c2VybmFtZSI6InhwdG8iLCJtaWRkbGVfbmFtZSI6IlJpYmVpcm8iLCJhdWQiOiIzZWFjNmFtNXF1MjlvYWU3azZnZm43OXQ3YSIsImV2ZW50X2lkIjoiZGQwMjJiZmQtMjE5OC00NDJlLTg3NTAtZTczNzdkODQ4ZjkwIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE1NjM4Mjc5OTgsIm5hbWUiOiJ4cHRvIiwiZXhwIjoxNTYzODMxNTk4LCJpYXQiOjE1NjM4Mjc5OTgsImVtYWlsIjoiZW1haWxkb2ZlbGlwZXJpYmVpcm9AZ21haWwuY29tIn0.Goj4q7U2Xyqmrgvs0Dih7maiNihxxx0fObmDA2HW8pudJYYMb98y3LbkL0MkvmTNPhhUSScC3rFBagZYv7wJ1M-1LtJ6EimXSnpZ1k8SJdBVSMnc4MF72wuEV49ynagBx9XFOv9cLjxZLA1E7Hqf_5SO1Pb6msmPKXyWkMvsSPMVnaIiizuy1fSEVK5zZJ2YEoBFDtsFnmEqzq_xbLZ7nqXc-FVGeXNje3MXAHnosrCIwv9d7Q2KCB973j56B_4rKaJZ4WhjMe42Dy_CZ7BE7CSBATht-guaXtcrc2ZX0l1gmyXc41isqqvsLmZEu3tOXU2ws3plTVc02uStkSODTA",
+          "payload": {
+            "sub": "4dd18174-2885-4582-bc82-6aa45fc9a133",
+            "email_verified": true,
+            "iss": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_DlSkodHt4",
+            "cognito:username": "xpto",
+            "middle_name": "Ribeiro",
+            "aud": "3eac6am5qu29oae7k6gfn79t7a",
+            "event_id": "dd022bfd-2198-442e-8750-e7377d848f90",
+            "token_use": "id",
+            "auth_time": 1563827998,
+            "name": "xpto",
+            "exp": 1563831598,
+            "iat": 1563827998,
+            "email": "emaildofeliperibeiro@gmail.com"
+          }
+        },
+        "refreshToken": {
+          "token": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.A0WaUfC8EjW2d5YiBx6UXT9AlK9DtPhM9YqUneqBxLyqRz5wCnWzd9D5Q1XdwKQkR6Kf21BGp4mUwbao_t50rF1wNfjxxCL_nBj27zsa-to6HctFh2JIa5StXUbo34M7eg8ushH2xWxd8-unyd0iodOIp1meIQk5Nk9N0f1R9gDjg7RmjrtleRU63l3D_m6gU4Vc93IvGT95m1T7iL7U7JU0evQA5Rmo8j5ye89o7-MhMCChrzQ9wx4faPFJdrkcvljfjMDTrj-IsGJLwfJKG39qgp0wSPJQlG0dpMhcwG_8X22RpHDthuY4MCGIrqVfY4l7MtD86J6jMOmQccs8ng.aLbofjJ1IXh2YpPw.INxpoiMUL6j95kgOWfIXrqB0kEE3MNfT59SDQNblUVE6Q5K6QHTwcMA2y45U1wi8Y3FDG8sgZ2hLS-3bfwArDD-2crwCCYq18dOBbIOz102RA_TyFDEkHmq1r-pqwKm9iOdrjVwAwKksf2suVGT0z6OK9BWfRxdgmTj_CvMVDU_GliPf_9TuMBbWgw7sdT5_eAhdEak0sly-w3p5tRIPQnpcfbmFsQKR7ZRFdxYJKO0BljwcHLV3IYUc8ujvIG3oom_V5P5Ync9MOo7mlv8VN4DYAJLb4NaQvqJRr12h70Nx5SzyCnYx7Zn7CkkSSOdC7rswVrsWE6BzKLP8J5Xc79Ou8CD_OdAC-CC_STR891iW6VQKoemabZZfhJyqI9hueEsdlobLYioEATeFbJfs0tYFXerj6TrgAu1Grxdf80rkmGG2cczCVMA0wJKQJ7yKp5d5tbFkRLzVYxeKenO8UrYgQ7HhTS9FCsHqtnr5dfE96Uq5RTWaxHx7zdTp_8-Onuo028IHeeFrkaZ8W7g5-niM4LhcPNPvu9vtRJTMSrYKAEHkjPDV8t_6D7Nt0sfiuOXYMqndesYKx6PqU76fkde2k-H5xIeFXH6LaZR3viugmQJh_EANyOZOgQR0NF8IZEKcua7Z9mdRkpOBiLO6ZxLE0ApYga5QC02fA3n1dlyl7Z0VJUCpTUJtpd0jpBotuSZq1FNQcy0iRS34QzNtoBEfXIH8MyDOrQ4VG_DniYXl29F_hNlQmr-4Jc44E15zwDvZ4ihgezCmQNGNCrp46lXpYO6ppbU80ul6Opp2IqVAJYxqRjr-hrjK7utTaocwnqQVysFxmDQYpnBCVjz6DK14REgiOfJ2100W4ZWqOqoGLfY-JdOMQs_fhd9p4YFQdY9_k4nuzCwdIpptgYiIb6x3fs2-OxDgxjrdIsu6IVS6HXRHTw-q-pIiZ3efN2w7areLDEveMjy1DGpUbmvEaM-CtNH0iLt3c1J8Fj6nNapOcth1cUoEVw4g79clj_BaBRL83ZA1i1clHlcL7zuClhgDJlBmib8ceI67z692kUNwd7P_SubV0tRkIkCBP4DENSj8xZVwhaolpvdcDJ8awwMwThrGcZd0lBJCE6zf3ly4sE91JLAF_SyvxHHPJ9F8wQ4bZdVAz6ZlYCp5YqIZVOjgKbJeQxohHZMtzeegh6BFbGHrgREfb8csxeceKMkEsrTpHYuim5t6QsQhBlaHG88-lBulWWBuCV8uwKOixkDuA9JSB1opSpzq_1vEXjDm_g.Ug27nUQPyMqWLkg-5EqMSQ"
+        },
+        "accessToken": {
+          "jwtToken": "eyJraWQiOiJuWVN2MDZcL3NFYVhlb2pkZnpjc1dFcGM5SzlwRlo1ZlhpZng0UkFyR3ZEbz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI0ZGQxODE3NC0yODg1LTQ1ODItYmM4Mi02YWE0NWZjOWExMzMiLCJldmVudF9pZCI6ImRkMDIyYmZkLTIxOTgtNDQyZS04NzUwLWU3Mzc3ZDg0OGY5MCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE1NjM4Mjc5OTgsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX0RsU2tvZEh0NCIsImV4cCI6MTU2MzgzMTU5OCwiaWF0IjoxNTYzODI3OTk4LCJqdGkiOiJmYjk1Yzc1Ni1mNmNjLTRiZDgtOTljZi1lMTdlMTMwMWU2YjUiLCJjbGllbnRfaWQiOiIzZWFjNmFtNXF1MjlvYWU3azZnZm43OXQ3YSIsInVzZXJuYW1lIjoieHB0byJ9.AmGPpaAItrteYNioXHhfp5jGLa2U53AuCX-ws43xukuun14xxVWQhEDVPUGdVkcXNjuomcKbjv33kRUnFi72a82RLStnYCg75GhjGg147Pzg5_4jcUNjZev5qUpZLKDwhq5PNdOVhLS0tFAc3cVHwB7ogNqwSQm4-_VsVht1YqlIdHqimPd_DfTrt4m7d9xGZKXb0VIHf_y043yhUaEGNVA98ouaGH94BsUM54j49axIpTIf6OubJRYJwnaHqpfOslMb9yalLijX5VDGo-p8zYBkIKyHLjo4tdJuxemT1HrtqKY24qA5-vQz1vkd3HprSm3go5S6gbHk7qWdZai9YA",
+          "payload": {
+            "sub": "4dd18174-2885-4582-bc82-6aa45fc9a133",
+            "event_id": "dd022bfd-2198-442e-8750-e7377d848f90",
+            "token_use": "access",
+            "scope": "aws.cognito.signin.user.admin",
+            "auth_time": 1563827998,
+            "iss": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_DlSkodHt4",
+            "exp": 1563831598,
+            "iat": 1563827998,
+            "jti": "fb95c756-f6cc-4bd8-99cf-e17e1301e6b5",
+            "client_id": "3eac6am5qu29oae7k6gfn79t7a",
+            "username": "xpto"
+          }
+        },
+        "clockDrift": 0
+      },
+      "time": 1563827998
+    }
+  },
+  "level": "debug"
+}

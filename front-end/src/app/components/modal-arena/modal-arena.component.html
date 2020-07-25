@@ -1,0 +1,9 @@
+<div class="wrap-modal">
+  <div class="modal-arena">
+    <span class="modal-title">ENTRE EM UMA ARENA</span>
+    <div class="arena-list">
+      <app-arena-item *ngFor="let arena of arenas" [arena]="arena" [routerLink]="['/arena',arena._id]">
+      </app-arena-item>
+    </div>
+  </div>
+</div>

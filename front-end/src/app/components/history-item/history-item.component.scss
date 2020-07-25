@@ -1,0 +1,59 @@
+@import "../../styles/mixins.scss";
+
+.history-item {
+  transition: background-color 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+
+  &:hover {
+    transition: background-color 0.15s ease;
+    background-color: #1c1a27;
+  }
+
+  span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #848294;
+    line-height: 18px;
+  }
+
+  button:enabled {
+    @include btn-ghost;
+    color: #848294;
+    border-color: #848294;
+    width: 100px;
+    height: 34px;
+  }
+
+  button:disabled {
+    @include btn-ghost;
+    color: #848294;
+    border-color: #848294;
+    opacity: 0.3;
+    width: 100px;
+    height: 34px;
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .history-item {
+    padding: 6px;
+
+    span {
+      font-size: 13px;
+      line-height: 14px;
+    }
+
+    button {
+      width: auto;
+      font-size: 12px;
+      height: 26px;
+    }
+  }
+}
