@@ -14,6 +14,27 @@ services:
       - mutant-backend
     networks:
       - mutantarena-network
+  mutant-report:
+    build:
+      context: ./report
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "4201:4201"
+    links:
+      - mutant-backend
+      - mutant-frontend
+    networks:
+      - mutantarena-network
+  mutant-runner:
+    build:
+      context: ./runner
+      dockerfile: Dockerfile
+    tty: true
+    links:
+      - mutant-backend
+    networks:
+      - mutantarena-network
   mutant-backend:
     build:
       context: ./back-end
