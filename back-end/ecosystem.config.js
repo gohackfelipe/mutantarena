@@ -10,7 +10,7 @@ module.exports = {
         max_memory_restart: '1G',
         env: {
             PORT: 3000,
-            MONGODB_URI: "mongodb://mongodb/mutantarena",
+            MONGODB_URI: "mongodb://localhost/mutantarena",
             AUTHSOURCE: "admin",
             MONGO_USER: "mutant",
             MONGO_PASS: "mutant2020!",
