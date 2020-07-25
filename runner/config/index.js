@@ -5,8 +5,8 @@ module.exports = {
     MaxNumberOfMessages: 1,
     VisibilityTimeout: 20,
     WaitTimeSeconds: 20,
-    // HostService: "https://api.mutantarena.feliperibeiro.dev",
-    HostService: "http://localhost:3000",
+    HostService: "https://api.mutantarena.feliperibeiro.dev",
+    // HostService: "http://localhost:3000",
     bypassMutation: false,
     dirTempName: "./mutants"
 }
