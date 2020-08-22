@@ -6,7 +6,9 @@ const request = require('request');
 const _ = require('lodash');
 const file = require('./file');
 const uuidv1 = require('uuid/v4');
+const async = require('async');
 const queueURL = config.queueURL;
+
 
 winston.info(`Initializing client receiving messages from ${queueURL}`);
 
@@ -156,24 +158,31 @@ const removeFromQueue = (message) => {
     });
 }
 
-sqs.receiveMessage(params, async (err, dataSQS) => {
-    if (err) {
-        winston.error('an error happen: ', err);
-    } else if (dataSQS.Messages) {
+async.forever((next) => {
+    console.log("Loading data from SQS");
+    sqs.receiveMessage(params, async (err, dataSQS) => {
+        if (err) {
+            winston.error('an error happen: ', err);
+        } else if (dataSQS.Messages) {
 
-        winston.log(dataSQS.Messages);
-        let __messageSQS = _.head(dataSQS.Messages);
-        if (!__messageSQS.Body) {
-            winston.error("no object from SQS found");
-            return;
-        }
-        const body = JSON.parse(__messageSQS.Body);
-        if (body.test) {
-            createMutants(__messageSQS);
-            return;
-        }
-    } //dataSQS.Messages
+            winston.log(dataSQS.Messages);
+            let __messageSQS = _.head(dataSQS.Messages);
+            if (!__messageSQS.Body) {
+                winston.error("no object from SQS found");
+                return;
+            }
+            const body = JSON.parse(__messageSQS.Body);
+            if (body.test) {
+                createMutants(__messageSQS);
+                next();
+            }
+        } //dataSQS.Messages
+    });
+    setTimeout(next, 20 * 1000);
+}, (err) => {
+    console.error(err);
 });
+
 
 const createMutants = async (__messageSQS) => {
     const body = JSON.parse(__messageSQS.Body);
