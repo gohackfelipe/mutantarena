@@ -106,7 +106,8 @@ export class ConfigPageComponent implements OnInit {
       const arena: IArena = {
         _id: this.f._id.value,
         name: this.f.nameArena.value,
-        description: this.f.descriptionArena.value
+        description: this.f.descriptionArena.value,
+        sourceToMutate: this.code
       };
       this.arenaService.update(arena).subscribe((res: any) => {
         this.refresh("Arena atualizada com sucesso!", "OK");
