@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index"
+    "start": "nodemon src/index  --config nodemon.json"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@stryker-mutator/mocha-framework": "^2.0.2",
     "@stryker-mutator/mocha-runner": "^2.0.2",
     "app-root-path": "^2.2.1",
+    "async": "^3.2.0",
     "aws-sdk": "^2.496.0",
     "chai": "^4.2.0",
     "commander": "^2.20.0",
@@ -27,5 +28,8 @@
     "stryker-mocha-framework": "^0.15.1",
     "uuidv1": "^1.6.14",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

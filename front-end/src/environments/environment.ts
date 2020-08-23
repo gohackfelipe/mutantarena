@@ -5,9 +5,7 @@
 export const environment = {
   production: false,
   backend: 'http://localhost:3000',
-  // backend: 'https://api.mutantarena.feliperibeiro.dev',
-  // report: 'https://report.mutantarena.feliperibeiro.dev'
-  report: 'http://localhost:4201'
+  report: 'https://report.mutantarena.feliperibeiro.dev'
 };
 
 /*

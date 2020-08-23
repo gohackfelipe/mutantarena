@@ -1,0 +1,7 @@
+{
+    "ignore": [
+        "mutants/*",
+        "logs/*",
+        ".stryker-tmp/*"
+    ]
+}

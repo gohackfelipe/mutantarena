@@ -6,7 +6,7 @@ const config = require('../../config/config');
 const winston = require('winston');
 const sendMessageToJOB = require('../services/mutantjob');
 
-const getMutantsfromArena = function (_idArena) {
+const getMutantsfromArena = async function (_idArena) {
     return new Promise((resolve, reject) => {
         Arena.findById(_idArena).then(__arena => {
             let value = {
@@ -28,30 +28,21 @@ const getMutantsfromArena = function (_idArena) {
 }
 
 const getLastRound = (query) => {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         let where = {};
         if (query) {
             const { user, arena } = query;
             if (user) where["user"] = user;
             if (arena) where["arena"] = arena;
         }
-        Round.findOne(where).sort({ dateCreated: 'desc' }).then(__data => {
 
-            if (!__data || __data.status === "ERR") {
-                getMutantsfromArena(query.arena).then((data => {
-
-                    if (__data.testCaseCode) {
-                        data.testCaseCode = __data.testCaseCode;
-                    }
-                    resolve(data);
-                })).catch((err) => {
-                    reject(err);
-                })
-                return;
-            }
-            resolve(__data);
+        let lastRound = await Round.findOne(where).sort({ dateCreated: 'desc' });
+        if (_.isNull(lastRound) || lastRound.status === "ERR") {
+            let obj = await getMutantsfromArena(query.arena);
+            resolve(obj);
             return;
-        });
+        }
+        resolve(lastRound);
     });
 }
 

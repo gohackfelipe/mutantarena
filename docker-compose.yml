@@ -1,20 +1,23 @@
 version: "3"
 services:
-  mutant-frontend:
-    build:
-      context: ./front-end
-      dockerfile: Dockerfile
-    tty: true
-    environment:
-      - SERVICE=http://localhost:3000
-      - NODE_ENV=development
-    ports:
-      - "4200:4200"
-    depends_on: [mutant-backend, mongodb]
-    links:
-      - mutant-backend
-    networks:
-      - mutantarena-network
+  # mutant-frontend:
+  #   build:
+  #     context: ./front-end
+  #     dockerfile: Dockerfile
+  #   command: sh -c "npm run build_saas && npm audit fix && npm start"
+  #   tty: true
+  #   working_dir: /root/frontend/
+  #   environment:
+  #     - NODE_ENV=development
+  #   ports:
+  #     - "4200:4200"
+  #   depends_on: [mutant-backend, mongodb]
+  #   links:
+  #     - mutant-backend
+  #   networks:
+  #     - mutantarena-network
+  #   volumes:
+  #     - ./front-end:/root/frontend:cached
   mutant-report:
     build:
       context: ./report
@@ -26,20 +29,24 @@ services:
       - "4201:4201"
     links:
       - mutant-backend
-      - mutant-frontend
+      # - mutant-frontend
     networks:
       - mutantarena-network
   mutant-runner:
     build:
       context: ./runner
       dockerfile: Dockerfile
+    command: sh -c "npm start"
     tty: true
+    working_dir: /root/runner/
     environment:
       - NODE_ENV=development
     links:
       - mutant-backend
     networks:
       - mutantarena-network
+    volumes:
+      - ./runner:/root/runner:cached
   mutant-backend:
     build:
       context: ./back-end
