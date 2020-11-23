@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backend: 'https://api.mutantarena.feliperibeiro.dev',
-  report: 'https://report.mutantarena.feliperibeiro.dev'
+  backend: 'http://api.mutantarena.feliperibeiro.dev',
+  report: 'http://report.mutantarena.feliperibeiro.dev'
 };
