@@ -18,31 +18,31 @@ services:
   #     - mutantarena-network
   #   volumes:
   #     - ./front-end:/root/frontend:cached
-  # prometheus:
-  #   image: prom/prometheus:latest
-  #   container_name: monitoring_prometheus
-  #   restart: unless-stopped
-  #   volumes:
-  #     - ./monitor/prometheus/config:/etc/prometheus/
-  #     - ./monitor/prometheus/data:/prometheus
-  #   command:
-  #     - "-config.file=/etc/prometheus/prometheus.yml"
-  #     - "-storage.local.path=/prometheus"
-  #   expose:
-  #     - 9090
-  #   ports:
-  #     - 9090:9090
-  # grafana:
-  #   image: grafana/grafana:latest
-  #   container_name: monitoring_grafana
-  #   restart: unless-stopped
-  #   links:
-  #     - prometheus:prometheus
-  #   volumes:
-  #     - ./monitor/grafana:/var/lib/grafana
-  #   environment:
-  #     - GF_SECURITY_ADMIN_PASSWORD=admin
-  #     - GF_USERS_ALLOW_SIGN_UP=false
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: monitoring_prometheus
+    restart: unless-stopped
+    volumes:
+      - ./monitor/prometheus/config:/etc/prometheus/
+      - ./monitor/prometheus/data:/prometheus
+    command:
+      - "-config.file=/etc/prometheus/prometheus.yml"
+      - "-storage.local.path=/prometheus"
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana:latest
+    container_name: monitoring_grafana
+    restart: unless-stopped
+    links:
+      - prometheus:prometheus
+    volumes:
+      - ./monitor/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
 
   mutant-report:
     build:
@@ -93,8 +93,8 @@ services:
       - QUEUE_URL=
       - SQS_DELAY=5
       - SQS_ACTIVE=true
-      - AWS_ACCESS_KEY=AKIAUV2NXXTK4DTVC6FA
-      - AWS_SECRET_KEY=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
+      - AWS_ACCESS_KEY=
+      - AWS_SECRET_KEY=
       - NODE_ENV=development
       - APP_NAME=mutant-arena
     ports:
