@@ -18,7 +18,7 @@
     "@stryker-mutator/mocha-runner": "^2.0.2",
     "amazon-cognito-identity-js": "^3.0.13",
     "app-root-path": "^2.2.1",
-    "aws-sdk": "^2.496.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.13.3",
     "commander": "^2.20.0",
     "compression": "^1.5.2",
