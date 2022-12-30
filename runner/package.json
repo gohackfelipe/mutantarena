@@ -22,7 +22,7 @@
     "chai": "^4.2.0",
     "commander": "^2.20.0",
     "lodash": "^4.17.15",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
     "stryker-mocha-framework": "^0.15.1",
